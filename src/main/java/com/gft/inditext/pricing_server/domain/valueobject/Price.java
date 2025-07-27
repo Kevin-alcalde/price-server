@@ -1,10 +1,12 @@
 package com.gft.inditext.pricing_server.domain.valueobject;
 
-import org.apache.commons.lang3.ObjectUtils;
+import com.gft.inditext.pricing_server.domain.util.NumberUtil;
 
 import java.math.BigDecimal;
 
 public class Price implements ValueObject<BigDecimal> {
+
+    private static final String CLASS_NAME = Price.class.getSimpleName();
 
     private final BigDecimal value;
 
@@ -19,12 +21,8 @@ public class Price implements ValueObject<BigDecimal> {
     }
 
     private void validate(final Number value) {
-        if (ObjectUtils.isEmpty(value)) {
-            throw new NullPointerException("Price value cannot be null");
-        }
-        if (value.doubleValue() < 0) {
-            throw new IllegalArgumentException("Price value cannot be negative");
-        }
+        NumberUtil.checkIsNotEmtpy(value, CLASS_NAME);
+        NumberUtil.checkIsNotNegative(value, CLASS_NAME);
     }
 
     private BigDecimal convertToBigDecimal(final Number value) {

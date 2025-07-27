@@ -3,11 +3,11 @@ package com.gft.inditext.pricing_server.application.mapper;
 import com.gft.inditext.pricing_server.application.model.JpaProductPrice;
 import com.gft.inditext.pricing_server.application.product.request.PriceRequest;
 import com.gft.inditext.pricing_server.application.product.response.PriceResponse;
-import com.gft.inditext.pricing_server.domain.dto.ProductPriceDDto;
+import com.gft.inditext.pricing_server.domain.ddto.ProductPriceDDto;
 import com.gft.inditext.pricing_server.domain.entity.ProductPrice;
 import com.gft.inditext.pricing_server.domain.valueobject.BrandId;
-import com.gft.inditext.pricing_server.domain.valueobject.DateRequested;
 import com.gft.inditext.pricing_server.domain.valueobject.ProductId;
+import com.gft.inditext.pricing_server.domain.valueobject.date.DateRequested;
 
 public class ProductPriceMapper {
 

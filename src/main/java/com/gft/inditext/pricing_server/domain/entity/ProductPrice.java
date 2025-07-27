@@ -1,6 +1,8 @@
 package com.gft.inditext.pricing_server.domain.entity;
 
 import com.gft.inditext.pricing_server.domain.valueobject.*;
+import com.gft.inditext.pricing_server.domain.valueobject.date.EndDate;
+import com.gft.inditext.pricing_server.domain.valueobject.date.StartDate;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

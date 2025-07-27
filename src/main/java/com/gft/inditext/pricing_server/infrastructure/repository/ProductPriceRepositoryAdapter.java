@@ -2,7 +2,7 @@ package com.gft.inditext.pricing_server.infrastructure.repository;
 
 import com.gft.inditext.pricing_server.application.mapper.ProductPriceMapper;
 import com.gft.inditext.pricing_server.application.model.JpaProductPrice;
-import com.gft.inditext.pricing_server.domain.dto.ProductPriceDDto;
+import com.gft.inditext.pricing_server.domain.ddto.ProductPriceDDto;
 import com.gft.inditext.pricing_server.domain.entity.ProductPrice;
 import com.gft.inditext.pricing_server.domain.repository.ProductPriceRepository;
 import lombok.RequiredArgsConstructor;

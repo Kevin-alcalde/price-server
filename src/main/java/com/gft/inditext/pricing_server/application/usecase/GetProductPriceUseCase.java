@@ -3,7 +3,7 @@ package com.gft.inditext.pricing_server.application.usecase;
 import com.gft.inditext.pricing_server.application.mapper.ProductPriceMapper;
 import com.gft.inditext.pricing_server.application.product.request.PriceRequest;
 import com.gft.inditext.pricing_server.application.product.response.PriceResponse;
-import com.gft.inditext.pricing_server.domain.dto.ProductPriceDDto;
+import com.gft.inditext.pricing_server.domain.ddto.ProductPriceDDto;
 import com.gft.inditext.pricing_server.domain.entity.ProductPrice;
 import com.gft.inditext.pricing_server.domain.service.PriceFinder;
 import lombok.RequiredArgsConstructor;
