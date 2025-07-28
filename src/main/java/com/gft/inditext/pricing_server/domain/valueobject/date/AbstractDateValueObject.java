@@ -18,15 +18,15 @@ public abstract class AbstractDateValueObject implements ValueObject<LocalDateTi
 
     private final LocalDateTime date;
 
-    protected AbstractDateValueObject(String value) {
-        validate(value);
+    protected AbstractDateValueObject(String value, final String fieldName) {
+        validate(value, fieldName);
         this.date = parse(value);
     }
 
-    private static void validate(String value) {
-        ObjectUtil.checkNonNull(value, CLASS_NAME);
-        ObjectUtil.checkNotEmpty(value, CLASS_NAME);
-        DateTimeUtil.formatDate(value, CLASS_NAME);
+    private static void validate(String value, String fieldName) {
+        ObjectUtil.checkNonNull(value, fieldName);
+        ObjectUtil.checkNotEmpty(value, fieldName);
+        DateTimeUtil.formatDate(value, fieldName);
     }
 
     private static LocalDateTime parse(String value) {
