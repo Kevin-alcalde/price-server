@@ -13,9 +13,6 @@ public abstract class AbstractDateValueObject implements ValueObject<LocalDateTi
     protected static final DateTimeFormatter ISO_FORMATTER =
             DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 
-    private static final String CLASS_NAME =
-            AbstractDateValueObject.class.getSimpleName();
-
     private final LocalDateTime date;
 
     protected AbstractDateValueObject(String value, final String fieldName) {

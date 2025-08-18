@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(value = "product/pricing")
+@RequestMapping(value = "product/prices")
 @Tag(name = "Product Pricing API", description = "API to get the applicable price for a product in a given timestamp")
 public class PricingController {
 
     private final GetProductPriceUseCase getProductPriceUseCase;
 
-    @PostMapping(path = "/price")
+    @PostMapping
     public ResponseEntity<PriceResponse> getPrice(@RequestBody final PriceRequest priceRequest) {
         log.info("getPrice method called with input data: {}", priceRequest);
         final PriceResponse productPriceResponse = getProductPriceUseCase.execute(priceRequest);

@@ -1,8 +1,7 @@
-package com.gft.inditext.pricing_server.infrastructure;
+package com.gft.inditext.pricing_server.infrastructure.controller;
 
 import com.gft.inditext.pricing_server.application.product.response.FailureResponse;
 import com.gft.inditext.pricing_server.domain.exception.*;
-import com.gft.inditext.pricing_server.infrastructure.controller.PricingController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
