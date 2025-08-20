@@ -39,15 +39,8 @@ class PriceFinderTest {
         final Priority priority = new Priority(1);
         final Price price = new Price(new BigDecimal("35.50"));
         final Currency currency = new Currency("USD");
-        final ProductPrice productPrice = new ProductPrice(brandId,
-                startDate,
-                endDate,
-                priceList,
-                productId,
-                priority,
-                price,
-                currency
-        );
+        final ProductPrice productPrice = new ProductPrice(brandId, startDate, endDate, priceList, productId, priority, price, currency);
+
         Mockito.when(productPriceRepository.getProductPrice(Mockito.any())).thenReturn(Optional.of(productPrice));
 
         // When
@@ -57,7 +50,7 @@ class PriceFinderTest {
         Assertions.assertNotNull(productPriceResult);
         Assertions.assertEquals(productPriceDDto.productId().value(), productPriceResult.productId());
         Assertions.assertEquals(productPriceDDto.brandId().value(), productPriceResult.brandId());
-        Assertions.assertEquals(productPriceDDto.dateRequested().value(), productPriceResult.startDate().toString());
-
+        Assertions.assertEquals(productPriceDDto.dateRequested().value().toString(), productPriceResult.startDate());
     }
+
 }

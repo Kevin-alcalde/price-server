@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice(assignableTypes = {PricingController.class})
 public class ControllerAdvice {
 
-    @ExceptionHandler({EmptyValue.class,
-            InvalidDateFormat.class,
-            NegativeValue.class,
-            NullValue.class}
+    @ExceptionHandler({EmptyValueException.class,
+            InvalidDateFormatException.class,
+            NegativeValueException.class,
+            NullValueException.class}
     )
     public ResponseEntity<FailureResponse> handleException(final RuntimeException exception) {
         log.error(exception.getMessage(), exception);

@@ -1,7 +1,7 @@
 package com.gft.inditext.pricing_server.domain.util;
 
-import com.gft.inditext.pricing_server.domain.exception.EmptyValue;
-import com.gft.inditext.pricing_server.domain.exception.NullValue;
+import com.gft.inditext.pricing_server.domain.exception.EmptyValueException;
+import com.gft.inditext.pricing_server.domain.exception.NullValueException;
 
 public class ObjectUtil {
 
@@ -11,13 +11,13 @@ public class ObjectUtil {
 
     public static void checkNonNull(Object object, String fieldName) {
         if (object == null) {
-            throw NullValue.createWithDefaultMessage(fieldName);
+            throw NullValueException.createWithDefaultMessage(fieldName);
         }
     }
 
     public static void checkNotEmpty(String value, String fieldName) {
         if (value.isEmpty()) {
-            throw EmptyValue.create(fieldName);
+            throw EmptyValueException.create(fieldName);
         }
     }
 

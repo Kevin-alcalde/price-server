@@ -1,6 +1,6 @@
 package com.gft.inditext.pricing_server.domain.util;
 
-import com.gft.inditext.pricing_server.domain.exception.InvalidDateFormat;
+import com.gft.inditext.pricing_server.domain.exception.InvalidDateFormatException;
 
 import java.time.format.DateTimeFormatter;
 
@@ -17,7 +17,7 @@ public class DateTimeUtil {
         try {
             ISO_FORMATTER.parse(date);
         } catch (Exception e) {
-            throw InvalidDateFormat.createWithDefaultMessage(fieldName);
+            throw InvalidDateFormatException.createWithDefaultMessage(fieldName);
         }
     }
 }

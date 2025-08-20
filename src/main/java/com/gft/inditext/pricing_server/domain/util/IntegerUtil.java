@@ -1,8 +1,8 @@
 package com.gft.inditext.pricing_server.domain.util;
 
-import com.gft.inditext.pricing_server.domain.exception.EmptyValue;
-import com.gft.inditext.pricing_server.domain.exception.NegativeValue;
-import com.gft.inditext.pricing_server.domain.exception.NullValue;
+import com.gft.inditext.pricing_server.domain.exception.EmptyValueException;
+import com.gft.inditext.pricing_server.domain.exception.NegativeValueException;
+import com.gft.inditext.pricing_server.domain.exception.NullValueException;
 
 public class IntegerUtil {
 
@@ -12,19 +12,19 @@ public class IntegerUtil {
 
     public static void checkIsNotEmpty(final Integer value, final String className) {
         if (value == null) {
-            throw EmptyValue.create(className);
+            throw EmptyValueException.create(className);
         }
     }
 
     public static void checkIsNotNull(final Integer value, final String className) {
         if (value == null) {
-            throw NullValue.createWithDefaultMessage(className);
+            throw NullValueException.createWithDefaultMessage(className);
         }
     }
 
     public static void checkIsNotNegative(final Integer value, final String className) {
         if (value != null && value < 0) {
-            throw NegativeValue.create(className);
+            throw NegativeValueException.create(className);
         }
     }
 }
